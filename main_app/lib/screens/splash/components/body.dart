@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:main_app/constants.dart';
 import 'package:main_app/size_config.dart';
 
-// This is the best practice
+//! 這頁目前沒功用，但留著說不定會有用到～
 
 class Body extends StatefulWidget {
   @override

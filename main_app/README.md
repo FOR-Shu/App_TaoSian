@@ -1,6 +1,6 @@
 # main_app
 
-A new Flutter project.
+做鮮App.
 
 ## Getting Started
 
