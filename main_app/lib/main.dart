@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:main_app/Screens/Welcome/welcome_screen.dart';
 import 'package:main_app/constants.dart';
+import 'package:main_app/screens/splash/splash_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,10 +12,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Auth',
       theme: ThemeData(
-        primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
+        fontFamily: "Muli",
+        textTheme: TextTheme(
+          bodyText1: TextStyle(color: kTextColor),
+          bodyText2: TextStyle(color: kTextColor),
+        ),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WelcomeScreen(),
+      home: SplashScreen(),
     );
   }
 }
