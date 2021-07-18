@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:main_app/screens/home/home_screen.dart';
+import 'package:main_app/screens/setting/setting_screen.dart';
 
 import '../constants.dart';
-
-enum MenuState { home, food, scan, menu, setting }
+import '../enums.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
@@ -66,8 +66,14 @@ class CustomBottomNavBar extends StatelessWidget {
                 onPressed: () {},
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/setting.svg"),
-                onPressed: () {},
+                icon: SvgPicture.asset(
+                  "assets/icons/setting.svg",
+                  color: MenuState.setting == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () =>
+                    Navigator.pushNamed(context, SettingScreen.routeName),
               ),
             ],
           )),
