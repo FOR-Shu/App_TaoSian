@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:main_app/constants.dart';
 import 'package:main_app/screens/splash/splash_screen.dart';
+import 'package:main_app/theme.dart';
+import 'package:main_app/routes.dart';
+import 'package:main_app/screens/setting/setting_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,16 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'TaoSian',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: "Muli",
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: kTextColor),
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: SplashScreen(),
+      theme: theme(),
+      //home: SplashScreen(),
+      // We use routeName so that we dont need to remember the name
+      //* 想要看到什麼畫面就改什麼
+      initialRoute: SettingScreen.routeName,
+      routes: routes,
     );
   }
 }
