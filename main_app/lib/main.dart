@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'TaoSian',
-      theme: theme(),
+      theme: ThemeData(fontFamily: 'Noto_Serif_TC'),
       //home: SplashScreen(),
       // We use routeName so that we dont need to remember the name
       //* 想要看到什麼畫面就改什麼
