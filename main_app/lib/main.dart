@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 //import 'package:main_app/constants.dart';
-import 'package:main_app/theme.dart';
 import 'package:main_app/routes.dart';
 import 'package:main_app/screens/setting/setting_screen.dart';
 

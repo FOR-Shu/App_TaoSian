@@ -11,3 +11,5 @@ const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
 
 const kAnimationDuration = Duration(milliseconds: 200);
+
+final kShadowColor = Color(0xFFACA8A8).withOpacity(.84);
