@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/bg.png"),
+            image: AssetImage("assets/images/Background.png"),
             alignment: Alignment.topCenter,
             fit: BoxFit.fitWidth,
           ),
@@ -57,14 +57,14 @@ class Body extends StatelessWidget {
                     left: 0,
                     right: 0,
                     child: Container(
-                      height: 221,
+                      height: 220,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(29),
+                        borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
                               offset: Offset(2, 4),
-                              blurRadius: 33,
+                              blurRadius: 20,
                               color: kShadowColor),
                         ],
                       ),
@@ -72,8 +72,47 @@ class Body extends StatelessWidget {
                   ),
                   Image.asset(
                     "assets/images/account.png",
-                    height: 90,
-                    width: 95,
+                    height: 100,
+                    width: 120,
+                  ),
+                  Positioned(
+                    child: Column(
+                      children: <Widget>[],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              margin: EdgeInsets.only(left: 30),
+              height: 255,
+              width: 354,
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      height: 255,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                              offset: Offset(2, 4),
+                              blurRadius: 20,
+                              color: kShadowColor),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Image.asset(
+                    "assets/images/store.png",
+                    height: 55,
+                    width: 85,
                   ),
                 ],
               ),
