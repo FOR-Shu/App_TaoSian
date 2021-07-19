@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:main_app/constants.dart';
 import 'package:main_app/routes.dart';
-import 'package:main_app/screens/setting/setting_screen.dart';
+import 'package:main_app/screens/qrscan/qrscan_screen.dart';
 
 //import 'package:main_app/screens/home/home_screen.dart';
 void main() => runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       //home: SplashScreen(),
       // We use routeName so that we dont need to remember the name
       //* 想要看到什麼畫面就改什麼
-      initialRoute: SettingScreen.routeName,
+      initialRoute: QrScanScreen.routeName,
       routes: routes,
     );
   }

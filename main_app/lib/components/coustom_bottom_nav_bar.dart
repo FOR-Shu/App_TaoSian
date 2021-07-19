@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:main_app/screens/home/home_screen.dart';
+import 'package:main_app/screens/qrscan/qrscan_screen.dart';
 import 'package:main_app/screens/setting/setting_screen.dart';
-
+import 'package:main_app/screens/store/store_screen.dart';
+import 'package:main_app/screens/menu/menu_screen.dart';
 import '../constants.dart';
 import '../enums.dart';
 
@@ -34,69 +36,73 @@ class CustomBottomNavBar extends StatelessWidget {
         ),
       ),
       child: SafeArea(
-          top: false,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                icon: SvgPicture.asset(
-                  "assets/icons/list.svg",
-                  height: 100,
-                  width: 100,
-                  color: MenuState.home == selectedMenu
-                      ? kPrimaryColor
-                      : inActiveIconColor,
-                ),
-                onPressed: () =>
-                    Navigator.pushNamed(context, HomeScreen.routeName),
+        top: false,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              icon: SvgPicture.asset(
+                "assets/icons/list.svg",
+                height: 100,
+                width: 100,
+                color: MenuState.home == selectedMenu
+                    ? kPrimaryColor
+                    : inActiveIconColor,
               ),
-              IconButton(
-                icon: SvgPicture.asset(
-                  "assets/icons/box.svg",
-                  height: 100,
-                  width: 100,
-                  color: MenuState.food == selectedMenu
-                      ? kPrimaryColor
-                      : inActiveIconColor,
-                ),
-                onPressed: () {},
+              onPressed: () =>
+                  Navigator.pushNamed(context, HomeScreen.routeName),
+            ),
+            IconButton(
+              icon: SvgPicture.asset(
+                "assets/icons/box.svg",
+                height: 100,
+                width: 100,
+                color: MenuState.store == selectedMenu
+                    ? kPrimaryColor
+                    : inActiveIconColor,
               ),
-              IconButton(
-                icon: SvgPicture.asset(
-                  "assets/icons/qrcodescan.svg",
-                  height: 100,
-                  width: 100,
-                  color: MenuState.scan == selectedMenu
-                      ? kPrimaryColor
-                      : inActiveIconColor,
-                ),
-                onPressed: () {},
+              onPressed: () =>
+                  Navigator.pushNamed(context, StoreScreen.routeName),
+            ),
+            IconButton(
+              icon: SvgPicture.asset(
+                "assets/icons/qrcodescan.svg",
+                height: 100,
+                width: 100,
+                color: MenuState.scan == selectedMenu
+                    ? kPrimaryColor
+                    : inActiveIconColor,
               ),
-              IconButton(
-                icon: SvgPicture.asset(
-                  "assets/icons/menu.svg",
-                  height: 100,
-                  width: 100,
-                  color: MenuState.menu == selectedMenu
-                      ? kPrimaryColor
-                      : inActiveIconColor,
-                ),
-                onPressed: () {},
+              onPressed: () =>
+                  Navigator.pushNamed(context, QrScanScreen.routeName),
+            ),
+            IconButton(
+              icon: SvgPicture.asset(
+                "assets/icons/menu.svg",
+                height: 100,
+                width: 100,
+                color: MenuState.menu == selectedMenu
+                    ? kPrimaryColor
+                    : inActiveIconColor,
               ),
-              IconButton(
-                icon: SvgPicture.asset(
-                  "assets/icons/setting.svg",
-                  height: 100,
-                  width: 100,
-                  color: MenuState.setting == selectedMenu
-                      ? kPrimaryColor
-                      : inActiveIconColor,
-                ),
-                onPressed: () =>
-                    Navigator.pushNamed(context, SettingScreen.routeName),
+              onPressed: () =>
+                  Navigator.pushNamed(context, MenuScreen.routeName),
+            ),
+            IconButton(
+              icon: SvgPicture.asset(
+                "assets/icons/setting.svg",
+                height: 100,
+                width: 100,
+                color: MenuState.setting == selectedMenu
+                    ? kPrimaryColor
+                    : inActiveIconColor,
               ),
-            ],
-          )),
+              onPressed: () =>
+                  Navigator.pushNamed(context, SettingScreen.routeName),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
