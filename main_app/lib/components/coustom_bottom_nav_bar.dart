@@ -41,6 +41,8 @@ class CustomBottomNavBar extends StatelessWidget {
               IconButton(
                 icon: SvgPicture.asset(
                   "assets/icons/list.svg",
+                  height: 100,
+                  width: 100,
                   color: MenuState.home == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
@@ -49,16 +51,10 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/box.svg"),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: SvgPicture.asset("assets/icons/qrcodescan.svg"),
-                onPressed: () {},
-              ),
-              IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/menu.svg",
+                  "assets/icons/box.svg",
+                  height: 100,
+                  width: 100,
                   color: MenuState.food == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
@@ -67,7 +63,31 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
               IconButton(
                 icon: SvgPicture.asset(
+                  "assets/icons/qrcodescan.svg",
+                  height: 100,
+                  width: 100,
+                  color: MenuState.scan == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: SvgPicture.asset(
+                  "assets/icons/menu.svg",
+                  height: 100,
+                  width: 100,
+                  color: MenuState.menu == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: SvgPicture.asset(
                   "assets/icons/setting.svg",
+                  height: 100,
+                  width: 100,
                   color: MenuState.setting == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
