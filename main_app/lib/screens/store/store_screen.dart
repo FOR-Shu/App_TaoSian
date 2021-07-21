@@ -21,7 +21,7 @@ class StoreScreen extends StatelessWidget {
       elevation: 0,
       backgroundColor: kPrimaryColor,
       leading: IconButton(
-        icon: SvgPicture.asset("assets/icons/bar_menu.svg"),
+        icon: SvgPicture.asset("assets/icons/local_offer.svg"),
         onPressed: () {},
       ),
     );
