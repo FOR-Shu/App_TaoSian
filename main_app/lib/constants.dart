@@ -13,3 +13,5 @@ const kTextColor = Color(0xFF757575);
 const kAnimationDuration = Duration(milliseconds: 200);
 
 final kShadowColor = Color(0xFFACA8A8).withOpacity(.84);
+
+const double kDefaultPadding = 20.0;
