@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
 import 'ExpiredFood.dart';
 import 'header_with_seachbox.dart';
 import 'title_with_more_bbtn.dart';
@@ -17,9 +16,9 @@ class Body extends StatelessWidget {
       children: <Widget>[
         HeaderWithSearchBox(size: size),
         TitleWithMoreBtn(title: "種類", press: () {}),
-        FoodKind(),
+        //FoodKind(),
         TitleWithMoreBtn(title: "即將過期", press: () {}),
-        ExpiredFood(),
+        //ExpiredFood(),
         TitleWithMoreBtn(title: "未歸類之食材", press: () {}),
       ],
     );
