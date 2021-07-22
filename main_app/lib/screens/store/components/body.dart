@@ -15,11 +15,16 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         HeaderWithSearchBox(size: size),
-        TitleWithMoreBtn(title: "種類", press: () {}),
-        //FoodKind(),
-        TitleWithMoreBtn(title: "即將過期", press: () {}),
-        //ExpiredFood(),
-        TitleWithMoreBtn(title: "未歸類之食材", press: () {}),
+        Expanded(
+            child: ListView(
+          children: [
+            TitleWithMoreBtn(title: "種類", press: () {}),
+            FoodKind(),
+            TitleWithMoreBtn(title: "即將過期", press: () {}),
+            ExpiredFood(),
+            TitleWithMoreBtn(title: "未歸類之食材", press: () {}),
+          ],
+        )),
       ],
     );
   }
