@@ -14,4 +14,11 @@ const kAnimationDuration = Duration(milliseconds: 200);
 
 final kShadowColor = Color(0xFFACA8A8).withOpacity(.84);
 
+BoxShadow kBoxShadow = BoxShadow(
+  color: Colors.grey.withOpacity(0.2),
+  spreadRadius: 2,
+  blurRadius: 8,
+  offset: Offset(0, 0),
+);
+
 const double kDefaultPadding = 20.0;

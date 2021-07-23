@@ -19,11 +19,7 @@ class MenuAppBar extends StatelessWidget with PreferredSizeWidget {
           iconSize: 28.0,
           onPressed: () {},
         ),
-        IconButton(
-          icon: const Icon(Icons.search),
-          iconSize: 28.0,
-          onPressed: () {},
-        ),
+        SizedBox(width: 10),
       ],
     );
   }
